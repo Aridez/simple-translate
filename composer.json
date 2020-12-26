@@ -1,11 +1,15 @@
 {
     "name": "aridez/simple-translate",
-    "description": "Efficient Laravel translations available in Vue components",
+    "description": "Front-end efficient Laravel translations",
+    "keywords": ["laravel", "vue", "translate"],
+    "homepage": "https://github.com/Aridez/simple-translate",
     "type": "library",
     "license": "MIT",
     "authors": [{
         "name": "Eric Mourin",
-        "email": "info@skytanet.com"
+        "email": "info@skytanet.com",
+        "homepage": "https://skytanet.com"
+
     }],
     "require": {},
     "autoload": {
