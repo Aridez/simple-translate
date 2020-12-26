@@ -1,0 +1,26 @@
+{
+    "name": "aridez/simple-translate",
+    "description": "Efficient Laravel translations available in Vue components",
+    "type": "library",
+    "license": "MIT",
+    "authors": [{
+        "name": "Eric Mourin",
+        "email": "info@skytanet.com"
+    }],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Aridez\\SimpleTranslate\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Aridez\\SimpleTranslate\\SimpleTranslateServiceProvider"
+            ]
+        }
+    }
+}
