@@ -28,19 +28,6 @@ class SimpleTranslateServiceProvider extends ServiceProvider
             return ":__=\"function(translation) { return this.langs[translation] }\" :langs=\"{{json_bundle_translations($bundle)}}\"";
         });
 
-        Blade::directive('bundle2', function ($component) {
-            $encoding = JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_AMP | JSON_HEX_QUOT;
-            $component = trim($component, "'\" ");
-
-            $string = sprintf(
-                '":langs=\'" . json_encode(json_decode(file_get_contents(%s), true), %d) . "\'"',
-                'resource_path("simple-translate/bundles/" . App::getLocale() . "/' . $component . '.json")',
-                $encoding
-            );
-
-            return ('<?php echo ' . $string . '?>');
-        });
-
     }
 
     /**
